@@ -2,45 +2,46 @@ document.addEventListener('DOMContentLoaded', f_load)
 
 function f_load() {
 
-    const listaum = document.createElement('ol')
-    document.body.prepend(listaum)
+    const listaMae = document.createElement('ol')
+    document.body.prepend(listaMae)
     const contH2 = document.querySelectorAll('h2')
 
     for (let i = 0; i < contH2.length; i++) {
 
-        const elementos = f_newlist(`#h2${i + 1}`, contH2[i].textContent)
-        listaum.appendChild(elementos)
+        const elementos = f_criarLista(`#h2${i + 1}`, contH2[i].textContent)
+        listaMae.appendChild(elementos)
         mudarH2(contH2[i], i + 1)
 
     }
 }
 
-function f_newlist(ref, texto) {
+function f_criarLista(ref, texto) {
 
     const li = document.createElement('li')
-    const criarLink = f_newlink(ref, texto)
-    li.appendChild(newlink)
+    const criarLink = f_criarLink(ref, texto)
+    li.appendChild(criarLink)
 
     return li
 }
 
-function f_newlink(href, texto) {
+function f_criarLink(href, texto) {
 
-    const newlink = document.createElement('a')
-    newlink.setAttribute('href', href)
-    newlink.textContent = texto
+    const criarLink = document.createElement('a')
+    criarLink.setAttribute('href', href)
+    criarLink.textContent = texto
 
-    return newlink
+    return criarLink
 }
 
 function mudarH2(elemento, num) {
     elemento.textContent = `${num}. ${elemento.textContent}`
     elemento.id = `h2${num}`
-    const voltar = f_newlink('#', 'Voltar')
-    f_indepois(elemento, voltar)
+    const voltar = f_criarLink('#', 'Voltar')
+    f_inserirDepois(elemento, voltar)
 }
 
-function f_indepois(elemento, ref) {
+
+function f_inserirDepois(elemento, ref) {
     const nextElement = elemento.nextElementSibling
     elemento.parentElement.insertBefore(ref, nextElement)
 }
