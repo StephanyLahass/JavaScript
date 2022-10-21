@@ -9,7 +9,7 @@ function buscaAPI(acao){
 	});
 }
 function listaCidades(){
-	lista = document.querySelector('ol');
+	lista = document.querySelector('ul');
 	lista.textContent = '';
 	cidades.forEach(cidade =>{
 		item = document.createElement('li');
@@ -17,3 +17,4 @@ function listaCidades(){
 		lista.append(item);
 	});
 }
+
