@@ -12,6 +12,7 @@ function teste(){
 	}
 }
 
+
 function alterarH2(elem, secnum){ 
 	inserirNumero(elem, secnum)
 	elem.id = `sec${secnum}`
