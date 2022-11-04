@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: Bradley Hand, cursive;
+    color: rgb(28, 68, 105);
+    margin-left: 7%;
+}
+body{
+    background-color: rgba(107, 193, 214, 0.699);
+    font-family: sans-serif;
+    font-size: 1em;
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+}
+.btn{
+    border-radius: 4px;
+    color: rgb(248, 248, 248);
+    background-color: rgb(35, 105, 145);
+}
+#barraDigitar{
+    background-color: rgb(125, 207, 228);
+    color: rgb(1, 9, 17);
+    font-family: Snell Roundhand, cursive;
+}
