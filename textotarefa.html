@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>todolist</title>
+    <link rel="stylesheet" href='textotarefa.css' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style id="estiloOculto">
+        .oculto {
+            display: none;
+        }
+    </style>
+</head>
+<body onload="withDB(carregaTarefas)">
+    <h1>To-Do List</h1>
+
+    <button id="mostraEscondeConcluidos" class="btn">All Tasks</button>
+    <form action="">
+        <input type="text" id="barraDigitar" name="novatarefa" placeholder="Write here, honey!">
+        <input type="submit" value="Insert" class="btn">
+    </form>
+    <div id="lista"></div>
+    
+    <script type="text/javascript" src="tamanhotexto.js"> </script>
+</body>
+</html>
